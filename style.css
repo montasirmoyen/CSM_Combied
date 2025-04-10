@@ -1,0 +1,263 @@
+/* CSS */
+:root {
+    --suffolk-blue: #002855;
+    --suffolk-gold: #B9975B;
+    --dark-gray: #2d2d2d;
+    --light-gray: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background: var(--suffolk-blue);
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    height: 40px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,40,85,0.9), rgba(0,40,85,0.8)),
+                url('campus-bg.jpg') center/cover;
+    color: white;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+    background: white;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+}
+
+.search-btn {
+    padding: 0 1.5rem;
+    background: var(--suffolk-gold);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #a8834f;
+}
+
+/* Main Content */
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.map-preview {
+    margin: 3rem 0;
+}
+
+.map-preview h2 {
+    color: var(--suffolk-blue);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.map-image-wrapper {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.map-image-wrapper img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--suffolk-gold);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: var(--suffolk-blue);
+    margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn.primary {
+    background: var(--suffolk-blue);
+    color: white;
+}
+
+.btn.secondary {
+    background: var(--suffolk-gold);
+    color: white;
+}
+
+.btn.outline {
+    border-color: var(--suffolk-blue);
+    color: var(--suffolk-blue);
+    background: transparent;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    background: var(--suffolk-blue);
+    color: white;
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.university-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.university-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: var(--suffolk-gold);
+    font-size: 1.5rem;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .university-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* MAP */
+
+#map {
+    width: 100%;
+    height: 100vh;
+}
+
+.search-category-container {
+    position: absolute;
+    right: 7.25%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}

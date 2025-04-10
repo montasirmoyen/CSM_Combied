@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Suffolk University Interactive Campus Map</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+        <link rel="shortcut icon" href="//uga-suffolk-edu.cdn.technolutions.net/favicon.ico">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <img src="Suffolk_University_coat_of_arms.svg" alt="Suffolk University Logo" class="logo">
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Explore Suffolk University Campus</h1>
+                <p>Your interactive guide to navigating campus life</p>
+                <div class="search-container">
+                    <input type="text" placeholder="Search buildings, dining, or clubs...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="container">
+            <!-- Map Preview -->
+            <section class="map-preview">
+                <h2>Campus Map Overview</h2>
+                
+                
+                <div class="map-image-wrapper"> 
+                    <div class="search-category-container">
+                    <div class="dropdown">
+                        <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Clubs
+                        </button>
+                        <ul class="dropdown-menu" id = "clubDropdownMenu">
+                        </ul>
+                      </div>
+            
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Locations
+                        </button>
+                        <ul class="dropdown-menu" id = "locDropdownMenu">
+                        </ul>
+                      </div>
+                </div>
+                <div id = "map" class="map-image-wrapper"> </div>
+            </section>
+
+            <!-- Features Grid -->
+            <section class="features-grid">
+                <article class="feature-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Dining Areas</h3>
+                    <p>Discover all campus dining options with live menu updates</p>
+                </article>
+
+                <article class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Club Meetings</h3>
+                    <p>Find meeting locations and event schedules</p>
+                </article>
+
+                <article class="feature-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Academic Facilities</h3>
+                    <p>Navigate to classrooms and lecture halls effectively</p>
+                </article>
+            </section>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn primary">View Live Map</button>
+                <button class="btn secondary">Club Registration</button>
+                <button class="btn outline">Events Calendar</button>
+                <button class="btn outline">Get Directions</button>
+            </div>
+        </main>
+        
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="university-links">
+                    <a href="https://www.suffolk.edu">University Home</a>
+                    <a href="https://www.suffolk.edu/campus-safety">Safety</a>
+                    <a href="https://www.suffolk.edu/student-services">Services</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/suffolk_U/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/Suffolk_U"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/SuffolkUniversity"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
